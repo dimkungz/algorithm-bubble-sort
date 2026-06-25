@@ -7,7 +7,18 @@
 */
 
 // Start coding here
-
+function sortedByScore(student){
+  for(let i=0;i<student.length-1;i++){
+      for(let j=0;j<student.length-1-i;j++){
+          if(student[j].score<student[j+1].score){
+              let temp = student[j];
+              student[j]=student[j+1];
+              student[j+1] = temp;
+          }
+      }
+  }
+  return student;
+}
 const studentsInfo = [
   { firstname: "John", lastname: "Doe", score: 85 },
   { firstname: "Jane", lastname: "Smith", score: 92 },
